@@ -1,0 +1,3 @@
+= DeskOS: thunderbird-es-configuration RPM
+
+This is the _thunderbird-es-configuration_ RPM package for the *DeskOS* operating system.
