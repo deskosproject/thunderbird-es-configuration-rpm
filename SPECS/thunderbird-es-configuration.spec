@@ -1,12 +1,11 @@
 Name:		thunderbird-es-configuration
-Version:	38.8.0
+Version:	45.2
 Release:	1%{?dist}
 Summary:	Thunderbird configuration for Spanish user interface and dictionary
 
 License:        GPLv3	
-URL:		https://github.com/deskosproject/thunderbird-spanish-configuration
+URL:		https://github.com/deskosproject/thunderbird-es-configuration
 
-BuildRequires:  thunderbird
 Requires:	hunspell-es
 Requires:	thunderbird
 
@@ -21,7 +20,7 @@ cat > %{buildroot}/usr/lib64/thunderbird/defaults/pref/spellchecker-dictionary-e
 pref("spellchecker.dictionary", "es");
 EOF
 
-cp -p /usr/lib64/thunderbird/langpacks/langpack-es-ES@thunderbird.mozilla.org.xpi %{buildroot}/usr/lib64/thunderbird/extensions/
+ln -sf ../langpacks/langpack-es-ES@thunderbird.mozilla.org.xpi %{buildroot}/usr/lib64/thunderbird/extensions/
 
 %files
 %doc
@@ -29,5 +28,9 @@ cp -p /usr/lib64/thunderbird/langpacks/langpack-es-ES@thunderbird.mozilla.org.xp
 /usr/lib64/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org.xpi
 
 %changelog
+* Wed Aug 10 2016 Ricardo Arguello <rarguello@deskosproject.org> - 45.2-1
+- Rebuilt for Thunderbird 45.2
+- Use a softlink to install the extension
+
 * Tue May 17 2016 Ricardo Arguello <rarguello@deskosproject.org> - 38.8.0-1
 - Initial release
