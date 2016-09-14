@@ -1,5 +1,5 @@
 Name:		thunderbird-es-configuration
-Version:	45.2
+Version:	45.3.0
 Release:	1%{?dist}
 Summary:	Thunderbird configuration for Spanish user interface and dictionary
 
@@ -28,6 +28,9 @@ ln -sf ../langpacks/langpack-es-ES@thunderbird.mozilla.org.xpi %{buildroot}/usr/
 /usr/lib64/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org.xpi
 
 %changelog
+* Tue Sep 13 2016 Ricardo Arguello <rarguello@deskosproject.org> - 45.3.0-1
+- Rebuilt for Thunderbird 45.3.0
+
 * Wed Aug 10 2016 Ricardo Arguello <rarguello@deskosproject.org> - 45.2-1
 - Rebuilt for Thunderbird 45.2
 - Use a softlink to install the extension
